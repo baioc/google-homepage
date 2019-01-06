@@ -1,2 +1,4 @@
-# google-homepage
-The Odin Project - WebDev 101 - HTML/CSS Project
+Google Homepage Project
+====
+
+From The Odin Project's [Curriculum](http://www.theodinproject.com/courses/web-development-101/lessons/html-css) - WebDev 101 - HTML/CSS Project
