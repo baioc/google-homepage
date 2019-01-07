@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+    padding: 0;
+	background: white;
+	font-family: Arial, sans-serif;
+	color: #65696d;
+}
+
+a {
+	text-decoration: none;
+	color: #65696d;
+}
+
+main p {
+	color: #222222;
+}
+
+.hyperlink {
+	color: #483ebc;
+	text-decoration-line: underline;
+}
+
+.login {
+	color: whitesmoke;
+	background-color: #4285f4;
+}
+
+.center {
+    margin: 0 auto;
+    display: block;
+	text-align: center;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+    float: left;
+}
