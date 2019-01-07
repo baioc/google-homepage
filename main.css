@@ -1,28 +1,15 @@
+* {
+	box-sizing: border-box;
+	clear: both;
+}
+
 body {
 	margin: 0;
-    padding: 0;
+	padding: 0;
 	background: white;
-	font-family: Arial, sans-serif;
-	color: #65696d;
-}
-
-a {
-	text-decoration: none;
-	color: #65696d;
-}
-
-main p {
+	font-family: "Liberation Sans", Arial, sans-serif;
 	color: #222222;
-}
-
-.hyperlink {
-	color: #483ebc;
-	text-decoration-line: underline;
-}
-
-.login {
-	color: whitesmoke;
-	background-color: #4285f4;
+	font-size: small;
 }
 
 .center {
@@ -36,5 +23,49 @@ main p {
 }
 
 .left {
-    float: left;
+	float: left;
+}
+
+ul {
+	list-style-type: none;
+	margin: 1em 1em 0 1em;
+	padding: 0;
+}
+
+li {
+	display: inline;
+	margin: 0 0.75em;
+}
+
+header li {
+	font-size: x-small;
+}
+
+a {
+	text-decoration: none;
+	color: #65696d;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.hyperlink {
+	color: #483ebc;
+}
+
+.login {
+	color: white;
+	background-color: #4285f4;
+	display: inline-block;
+	padding: 0.5em 0.75em;
+}
+
+.login:hover {
+	text-decoration: none;
+}
+
+.search-bar {
+	width: 30%;
+	height: 3em;
 }

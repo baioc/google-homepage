@@ -9,21 +9,24 @@
 
 <body>
 	<header>
-		<div class="right">
-			<a href="https://mail.google.com/">Gmail</a>
-			<a href="https://www.google.com.br/imghp?">Images</a>
-			<a href="#">Apps</a>
-			<a class="login" href="https://accounts.google.com/ServiceLogin">Sign in</a>
-		</div>
+		<ul class="right">
+			<li><a href="https://mail.google.com/">Gmail</a></li>
+			<li><a href="https://www.google.com.br/imghp?">Images</a></li>
+			<li><a href="#">Apps</a></li>
+			<li ><a class="login" href="https://accounts.google.com/ServiceLogin">Sign in</a></li>
+		</ul>
 	</header>
 
+	<!-- TODO: vertically center this section -->
 	<main>
+		<!-- TODO: vertically space each thing -->
 		<img src="./res/googlelogo.png" class="center">
-		<form class="center">
+		<form action="https://www.google.com/search" class="center">
 			<div class="center">
-				<input type="text">
+				<input type="text" name="q" class="search-bar">
 			</div>
 			<div class="center">
+				<!-- TODO: make buttons look more clean & the right size -->
 				<input type="submit" value="Google Search">
 				<input type="submit" value="I'm Feeling Lucky">
 			</div>
@@ -31,21 +34,20 @@
 		<p div class="center">Google offered in: <a href="https://www.google.com.br/" class="hyperlink">Português (Brasil)</a></p>
 	</main>
 
+	<!-- TODO: add #f2f2f2 background bar -->
 	<footer>
 		<div>
-			<p class="left">Brazil</p>
-		</div>
-		<div>
-			<div class="left">
-				<a href="https://ads.google.com/intl/en_br/home/">Advertising</a>
-				<a href="https://www.google.com/services/">Business</a>
-				<a href="https://www.google.com/intl/en_br/about/">About</a>
-			</div>
-			<div class="right">
-				<a href="https://policies.google.com/privacy?hl=en&gl=br">Privacy</a>
-				<a href="https://policies.google.com/terms?hl=en&gl=br">Terms</a>
-				<a href="https://www.google.com/preferences">Settings</a>
-			</div>
+			<ul class="left">
+				<li><a href="https://ads.google.com/intl/en_br/home/">Advertising</a></li>
+				<li><a href="https://www.google.com/services/">Business</a></li>
+				<li><a href="https://www.google.com/intl/en_br/about/">About</a></li>
+			</ul>
+			<!-- TODO: vertically align these two -->
+			<ul class="right">
+				<li><a href="https://policies.google.com/privacy?hl=en&gl=br">Privacy</a></li>
+				<li><a href="https://policies.google.com/terms?hl=en&gl=br">Terms</a></li>
+				<li><a href="https://www.google.com/preferences">Settings</a></li>
+			</ul>
 		</div>
 	</footer>
 </body>
