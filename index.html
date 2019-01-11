@@ -4,51 +4,45 @@
 <head>
 	<title>Google</title>
 	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.google.com/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
 	<header>
-		<ul class="right">
+		<ul class="right-al">
 			<li><a href="https://mail.google.com/">Gmail</a></li>
 			<li><a href="https://www.google.com.br/imghp?">Images</a></li>
-			<li><a href="#">Apps</a></li>
+			<li><a href="#apps">Apps</a></li>
 			<li ><a class="login" href="https://accounts.google.com/ServiceLogin">Sign in</a></li>
 		</ul>
 	</header>
 
-	<!-- TODO: vertically center this section -->
-	<main>
-		<!-- TODO: vertically space each thing -->
-		<img src="./res/googlelogo.png" class="center">
-		<form action="https://www.google.com/search" class="center">
-			<div class="center">
-				<input type="text" name="q" class="search-bar">
-			</div>
-			<div class="center">
-				<!-- TODO: make buttons look more clean & the right size -->
+	<!-- TODO: vertically center the main section -->
+	<main class="center-al">
+		<img src="./img/googlelogo.png">
+		<form action="https://www.google.com/search">
+			<input type="text" name="q" class="search-bar">
+			<div class="query-btn">
 				<input type="submit" value="Google Search">
 				<input type="submit" value="I'm Feeling Lucky">
 			</div>
 		</form>
-		<p div class="center">Google offered in: <a href="https://www.google.com.br/" class="hyperlink">Português (Brasil)</a></p>
+		<p>Google offered in: <a href="https://www.google.com.br/" class="hyperlink">Português (Brasil)</a></p>
 	</main>
 
-	<!-- TODO: add #f2f2f2 background bar -->
 	<footer>
-		<div>
-			<ul class="left">
-				<li><a href="https://ads.google.com/intl/en_br/home/">Advertising</a></li>
-				<li><a href="https://www.google.com/services/">Business</a></li>
-				<li><a href="https://www.google.com/intl/en_br/about/">About</a></li>
-			</ul>
-			<!-- TODO: vertically align these two -->
-			<ul class="right">
-				<li><a href="https://policies.google.com/privacy?hl=en&gl=br">Privacy</a></li>
-				<li><a href="https://policies.google.com/terms?hl=en&gl=br">Terms</a></li>
-				<li><a href="https://www.google.com/preferences">Settings</a></li>
-			</ul>
-		</div>
+		<ul class="left-al">
+			<li><a href="https://ads.google.com/intl/en_br/home/">Advertising</a></li>
+			<li><a href="https://www.google.com/services/">Business</a></li>
+			<li><a href="https://www.google.com/intl/en_br/about/">About</a></li>
+		</ul>
+		<!-- TODO: vertically align these two ULs -->
+		<ul class="right-al">
+			<li><a href="https://policies.google.com/privacy?hl=en&gl=br">Privacy</a></li>
+			<li><a href="https://policies.google.com/terms?hl=en&gl=br">Terms</a></li>
+			<li><a href="https://www.google.com/preferences">Settings</a></li>
+		</ul>
 	</footer>
 </body>
 
