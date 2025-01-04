@@ -10,7 +10,12 @@
 </head>
 
 <script>
-	function onSubmit(response) {
+	function onSubmit(event) {
+		grecaptcha.execute();
+		event.preventDefault(); // wait for captcha callback
+	}
+
+	function onCaptcha(response) {
 		console.log('callback arg =', response);
 		console.log('grecaptcha.getResponse() =', grecaptcha.getResponse());
 		fetch('https://www.recaptcha.net/recaptcha/api/siteverify', {
@@ -24,7 +29,7 @@
 			// https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do
 		}).then((response) => {
 			console.log(response);
-			document.getElementById('search-form').submit();
+			document.getElementById('search-form').submit(); // does not trigger event
 		}).catch((error) => {
 			console.error(error);
 			grecaptcha.reset();
@@ -44,7 +49,7 @@
 
 	<main class="center-al">
 		<img src="./img/googlelogo.png">
-		<form id="search-form" action="https://www.google.com/search" method="GET" onsubmit="grecaptcha.execute()">
+		<form id="search-form" action="https://www.google.com/search" method="GET">
 			<input type="text" name="q" class="search-bar">
 			<div class="query-btn">
 				<input id="btn-search"
@@ -56,11 +61,15 @@
 		<div
 			class="g-recaptcha"
 			data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-			data-callback="onSubmit"
+			data-callback="onCaptcha"
 			data-size="invisible"
 			data-action="search"
 		></div>
 	</main>
+
+	<script>
+		document.getElementById('search-form').addEventListener('submit', onSubmit, true);
+	</script>
 
 	<footer>
 		<ul class="left-al">
