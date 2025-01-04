@@ -27,6 +27,7 @@
 			document.getElementById('search-form').submit();
 		}).catch((error) => {
 			console.error(error);
+			grecaptcha.reset();
 		});
 	}
 </script>
@@ -43,19 +44,22 @@
 
 	<main class="center-al">
 		<img src="./img/googlelogo.png">
-		<form id="search-form" action="https://www.google.com/search" method="GET">
+		<form id="search-form" action="https://www.google.com/search" method="GET" onsubmit="grecaptcha.execute()">
 			<input type="text" name="q" class="search-bar">
 			<div class="query-btn">
 				<input id="btn-search"
 					type="submit"
 					value="Google Search"
-					class="g-recaptcha"
-					data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-					data-callback="onSubmit"
-					data-action="search"
 				/>
 			</div>
 		</form>
+		<div
+			class="g-recaptcha"
+			data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+			data-callback="onSubmit"
+			data-size="invisible"
+			data-action="search"
+		></div>
 	</main>
 
 	<footer>
