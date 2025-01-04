@@ -13,9 +13,8 @@ body {
 }
 
 main {
-	min-height: 184px;
 	text-align: center;
-    padding-top: 180px;
+	padding-top: 20%;
 }
 
 footer {
@@ -100,10 +99,15 @@ header a {
 	color: #222222;
 }
 
+.disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
 /* Alignment */
 .center-al {
-    margin: 0 auto;
-    display: block;
+	margin: 0 auto;
+	display: block;
 	text-align: center;
 }
 
@@ -113,4 +117,9 @@ header a {
 
 .left-al {
 	float: left;
+}
+
+.g-recaptcha {
+	display: inline-block;
+	margin: 2em;
 }
