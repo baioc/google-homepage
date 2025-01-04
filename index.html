@@ -10,9 +10,7 @@
 </head>
 
 <script>
-	function callback(response) {
-		document.getElementById('btn-search').classList.remove('disabled');
-		document.getElementById('btn-search').disabled = false;
+	function onSubmit(response) {
 		console.log('callback arg =', response);
 		console.log('grecaptcha.getResponse() =', grecaptcha.getResponse());
 		fetch('https://www.recaptcha.net/recaptcha/api/siteverify', {
@@ -26,6 +24,7 @@
 			// https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do
 		}).then((response) => {
 			console.log(response);
+			document.getElementById('search-form').submit();
 		}).catch((error) => {
 			console.error(error);
 		});
@@ -44,19 +43,18 @@
 
 	<main class="center-al">
 		<img src="./img/googlelogo.png">
-		<form action="https://www.google.com/search" method="GET">
+		<form id="search-form" action="https://www.google.com/search" method="GET">
 			<input type="text" name="q" class="search-bar">
 			<div class="query-btn">
 				<input id="btn-search"
-					disabled class="disabled"
 					type="submit"
 					value="Google Search"
+					class="g-recaptcha"
+					data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+					data-callback="onSubmit"
+					data-action="search"
 				/>
 			</div>
-			<div class="g-recaptcha"
-				data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-				data-callback="callback"
-			></div>
 		</form>
 	</main>
 
